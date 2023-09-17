@@ -54,11 +54,35 @@ let count = 1;
 
 toggleDarkMode.addEventListener("click", () => {
   htmlTag.classList.toggle("dark");
-  if(count % 2 == 1) {
+  if (count % 2 == 1) {
     toggleDarkMode.setAttribute("class", "bx bxs-moon");
     count++;
   } else {
     toggleDarkMode.setAttribute("class", "bx bxs-sun");
     count--;
   }
+});
+
+// Fitur Loading atau Splash Screen
+const loadingScreen = document.querySelector(".loading-screen");
+const loadingContainer = document.querySelector(".loading-container");
+const scrollBar = document.querySelector("body");
+
+const imagesToLoad = document.querySelectorAll("img");
+let imagesLoaded = 0;
+const totalImages = imagesToLoad.length;
+
+function imageLoaded() {
+  imagesLoaded++;
+  if (imagesLoaded === totalImages) {
+    loadingScreen.style.display = "none";
+    loadingContainer.style.display = "none";
+    scrollBar.style.overflow = "visible";
+  } else {
+    scrollBar.style.overflow = "hidden";
+  }
+}
+
+imagesToLoad.forEach((img) => {
+  img.addEventListener("load", imageLoaded);
 });

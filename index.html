@@ -35,6 +35,14 @@
     <meta property="og:image:width" content="500" />
   </head>
   <body>
+    <!-- Loading Screen Start -->
+
+    <div class="loading-container">
+      <div class="loading-screen"></div>
+    </div>
+
+    <!-- Loading Screen End -->
+
     <!-- Header Start -->
 
     <header>
@@ -42,10 +50,10 @@
 
       <nav>
         <a href="#" class="title">
-          <img src="./img/svg/Logo.svg" alt="Icon" />
+          <img src="./img/svg/Logo.svg" alt="Icon" loading="lazy" />
           <h1>Plag <span>AI</span></h1>
         </a>
-        <i id="dark-toggle" class='bx bxs-sun'></i>
+        <i id="dark-toggle" class="bx bxs-sun"></i>
         <ul id="dropdown">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -88,6 +96,7 @@
             src="./img/svg/AI-Landing Page.svg"
             alt="hero-image"
             id="hero-image"
+            loading="lazy"
           />
         </aside>
       </section>
@@ -114,6 +123,7 @@
             src="./img/svg/about-hero.svg"
             alt="about-hero"
             id="about-hero"
+            loading="lazy"
           />
         </aside>
       </section>
@@ -168,15 +178,31 @@
           <form id="form-contact">
             <div class="input-field">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Your Name">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
             </div>
             <div class="input-field">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Your Email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+              />
             </div>
             <div class="input-field">
               <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Message..."></textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Write Message..."
+              ></textarea>
             </div>
             <button type="submit">Submit</button>
           </form>
