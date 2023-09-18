@@ -66,7 +66,6 @@ toggleDarkMode.addEventListener("click", () => {
 // Fitur Loading atau Splash Screen
 const loadingScreen = document.querySelector(".loading-screen");
 const loadingContainer = document.querySelector(".loading-container");
-const scrollBar = document.querySelector("body");
 
 const imagesToLoad = document.querySelectorAll("img");
 let imagesLoaded = 0;
@@ -77,9 +76,7 @@ function imageLoaded() {
   if (imagesLoaded === totalImages) {
     loadingScreen.style.display = "none";
     loadingContainer.style.display = "none";
-    scrollBar.style.overflow = "visible";
   } else {
-    scrollBar.style.overflow = "hidden";
   }
 }
 

@@ -255,6 +255,13 @@ ul {
   background-color: #000;
 }
 
+nav .nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
 #dropdown.active {
   transform: translateX(0);
 }
@@ -355,11 +362,10 @@ ul li a:hover {
 
 #dark-toggle {
   font-size: 1.5rem;
-  transform: translateY(5px);
   cursor: pointer;
-  transform: translateX(45px);
   transition: 0s !important;
   color: #000;
+  transform: translateX(2rem);
 }
 
 .dark #dark-toggle {
@@ -372,13 +378,17 @@ ul li a:hover {
   }
 
   #dark-toggle {
-    transform: translateX(220px);
+    transform: translateX(13rem);
   }
 }
 
 @media (min-width: 1024px) {
   nav {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+
+  nav .nav-list {
+    gap: 2rem;
   }
 
   nav .title img {
@@ -405,7 +415,7 @@ ul li a:hover {
   }
 
   #dark-toggle {
-    transform: translateX(260px);
+    transform: translate(0, 3px);
   }
 }
 
